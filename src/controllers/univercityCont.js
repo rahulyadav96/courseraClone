@@ -1,6 +1,6 @@
 const express = require("express");
 
-const Univercity = require("../modules/univercity.modules");
+const Univercity = require("../models/univercity.model");
 
 const router = express.Router();
 

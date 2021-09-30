@@ -1,6 +1,6 @@
 const express = require("express");
 
-const Prop = require("../modules/crs_properties.modules");
+const Prop = require("../models/crs_properties.model");
 
 const router = express.Router();
 

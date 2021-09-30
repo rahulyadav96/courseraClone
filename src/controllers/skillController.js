@@ -1,6 +1,6 @@
 const express = require("express");
 
-const Skill = require("../modules/skill.modules");
+const Skill = require("../models/skill.model");
 //console.log(Prop.property);
 const router = express.Router();
 

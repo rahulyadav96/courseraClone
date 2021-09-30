@@ -1,6 +1,6 @@
 const express = require("express");
 
-const Instructor = require("../modules/instructor.modules");
+const Instructor = require("../models/instructor.model");
 
 const router = express.Router();
 
