@@ -1,6 +1,7 @@
 const express = require("express");
 const path = require("path")
 
+
 const port = 3932;
 //connect access database
 const connect = require("./config/db");
@@ -31,6 +32,8 @@ const programController = require("./controllers/programController")
 
 const degreeController = require("./controllers/degreeController")
 
+const exploreController = require("./controllers/exploreController")
+
 
 
 
@@ -45,6 +48,8 @@ app.use("/skills", skillCont);
 app.use("/programs", programController)
 
 app.use("/degrees", degreeController)
+
+app.use("/explore", exploreController)
 
 //server running on
 app.listen(port, async()=>{

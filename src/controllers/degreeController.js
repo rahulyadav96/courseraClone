@@ -6,26 +6,34 @@ const router = express.Router();
 
 //post request
 
-router.post("", async(req, res) => {
+router.post("", async (req, res) => {
 
     const degree = await Degree.create(req.body)
 
-   return res.status(201).send({degree})
+    return res.status(201).send({ degree })
 
 
 })
 
-router.get("", async(req, res) => {
 
-    Degree.find({}, function(err, degrees){
+router.get("", async (req, res) => {
+    
 
-        res.render("degree",{
+
+   Degree.find({}, function (err, degrees) {
+
+        res.render("degree", {
 
             degreeList: degrees
+
         })
+
+
+
+
     })
 
-   
+ 
 
 
 })
