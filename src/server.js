@@ -1,22 +1,25 @@
 const express = require("express");
 const path = require("path")
-
-const port = 3932;
-//connect access database
 const connect = require("./config/db");
 
-//Working for express and views:-
-
 const app = express()
-
+const port = 3932;
 app.use(express.json())
-
+//static files
 app.set("view engine", "ejs")
 app.use(express.static("public"));
 
+
+//Working for express and views:-
+
+
+
+
+//setting up default view path
+app.set("views", path.join(__dirname, "views"))
+
 app.use(express.urlencoded({ extended: false}))
 
-app.set("views", path.join(__dirname, "views"))
 
 //controllers
 const propCont = require("./controllers/propController");
@@ -45,6 +48,7 @@ app.use("/skills", skillCont);
 app.use("/programs", programController)
 
 app.use("/degrees", degreeController)
+
 
 //server running on
 app.listen(port, async()=>{

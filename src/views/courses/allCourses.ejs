@@ -7,9 +7,9 @@
     <title>Top Free Online Courses | Learn Online with Coursera</title>
     <link rel="icon" href="https://d3njjcbhbojbot.cloudfront.net/web/images/favicons/favicon-v2-96x96.png" sizes="96x96">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./css/freeCourseStyle.css">
-    <link rel="stylesheet" href="./css/mypagesfooter.css">
-    <link rel="stylesheet" href="./css/navBarStyle.css">
+    <link rel="stylesheet" href="css/freeCourseStyle.css">
+    <link rel="stylesheet" href="css/mypagesfooter.css">
+    <link rel="stylesheet" href="css/navBarStyle.css">
 </head>
 <body>
     <!--Navigation bar-->
@@ -164,43 +164,46 @@
         </div>
         
         <!-- free cources -->
-        <div id="main-coouses-Cont">
+        <div id="main-course-Cont">
             <% for (course of courses){ %>
-            <div class="course-cont">
-                <a href="enrollCourse.html">
-                    <div class="course">
-                        <div class="image-cont">
-                            <img src="<%= course.crs_logo %>" alt="">
-                        </div>
-                        <div class="info">
-                            <div class="course-title"><h2><%= course.title%></h2></div>
-                            <div class="un-name-wraper"><span class="university-name"><%= course.univercity.un_name%></span></div>
-                            <div class="cs-wraper">
-                                <div class="type">
-                                    <span>Course</span>
+
+            <div class="course-cont" >
+                <a href="/courses/<%=  course._id%> " target="new">
+                        <div class="course">
+                            <div class="image-cont">
+                                <img src="<%= course.crs_logo %>" alt="">
+                            </div>
+                            <div class="info">
+                                <div class="course-title"><h2><%= course.title%></h2></div>
+                                <div class="un-name-wraper"><span class="university-name"><%= course.univercity.un_name%></span></div>
+                                <div class="cs-wraper">
+                                    <div class="type">
+                                        <span>Course</span>
+                                    </div>
+                                </div>
+                                   
+                                <div class="star-cont">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    
+                                    <span class="no-of-review"> <b><%= course.rating %></b> <span class="divider">|</span> <b><%= course.students%></b> Students</span>
+                                     
+                                </div>
+                                <div class="dif-level">
+                                    <span class="fa fa-signal"></span>
+                                    <span class="crs-level"><%= course.level %></span>
                                 </div>
                             </div>
-                               
-                            <div class="star-cont">
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                
-                                <span class="no-of-review"> <b><%= course.rating %></b> <span class="divider">|</span> <b><%= course.students%></b> Students</span>
-                                 
-                            </div>
-                            <div class="dif-level">
-                                <span class="fa fa-signal"></span>
-                                <span class="crs-level"><%= course.level %></span>
-                            </div>
                         </div>
-                    </div>
-                   
-                </a>
+                       
+                </a> 
                 <hr>
             </div>
+           
+                    
             <% } %>
            
 
@@ -295,32 +298,30 @@
 
 <script>
 
+let parent = document.getElementById("main-course-Cont");
 
-
-let parent = document.getElementById("main-coouses-Cont");
-//console.log(parent);
 let course = parent.querySelectorAll('.course-cont');
 
 function filterElement(){
     let option = document.getElementById("level-option").value;
-    //console.log(option);
- 
+
     let course = parent.querySelectorAll('.course-cont');
-    //console.log(course);
 
-        for(let i = 0; i< course.length; i++){
-            //console.log(course[i]);
-
-            let crs_level = course[i].querySelector(".crs-level").innerHTML;
-            //console.log(crs_level);
-            course[i].style.display = "contents";
-            if(crs_level != option){
-              course[i].style.display = "none";
-             }
-        }
-   
-
-
+    for(let i = 0; i< course.length; i++){
+            
+        let crs_level = course[i].querySelector(".crs-level").innerHTML;
+           
+        course[i].style.display = "contents";
+        if(crs_level != option){
+            course[i].style.display = "none";
+            }
+    }
 }
 
+
+//rediret to particular course
+// function aboutCourse(course){
+// console.log(course);
+// window.location.assign(`localhost:3932/courses/${course._id}`);
+// }
 </script>
