@@ -1,11 +1,10 @@
 const mongoose = require("mongoose");
 
 const unSchema = new mongoose.Schema({
-    name:{type:String, required:true},
-    un_rating:{type:Number, required:false},
+    un_name:{type:String, required:true},
     logo:{type:String, required:true},
-    
-    instructors:[{type:mongoose.Schema.Types.ObjectId, ref:"instructor", require:true}],
+    about:{type:String, required:true},
+    faculty:[{type:mongoose.Schema.Types.ObjectId, ref:"intructor", required:true}],
 },{
     versionKey:false,
 });

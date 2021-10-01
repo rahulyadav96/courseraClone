@@ -11,6 +11,7 @@ router.post("", async (req,res)=>{
     const skill = await Skill.create(req.body);
 
     return res.status(201).send({skill});
+  
 })
 
 //get all properties
@@ -18,6 +19,9 @@ router.get("", async (req,res)=>{
     const skills = await Skill.find().lean().exec();
 
     return res.status(200).send({skills});
+//    res.render('all_skills',{
+//          skills:skills
+//     })
 });
 
 //modify a property
