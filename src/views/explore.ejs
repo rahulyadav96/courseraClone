@@ -5,40 +5,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <link rel="stylesheet" href="css/explore.css">
+
+  <style>
+
+      .small_container{
+
+        background-color: blue;
+      }
+  </style>  
+
+       
 </head>
 <body>
-
+    
     
 
-   <% degreeList.forEach(degrees => {%>
-        
-    <p><%=degrees.programs %></a></p> 
     
-       
+    <div id = "container"><%explore.programs.forEach(program => {%>
+
+        <img src="<%=program.imageUrl%>">
+    
+        <div class="small_container">
+            <p><%=JSON.stringify(program.program_name)%></p> 
+
+            <p><%=JSON.stringify(program.offered_by)%></p>
+            <p><%=JSON.stringify(program.duration)%></p>
+            <p><%=JSON.stringify(program.description)%></p>
+            
+    
+        </div>
+    
     
     <%})%>
 
-    
+
+</div>
+
+
+
 
 
     
 </body>
 </html>
 
-<!-- <script>
-
-//     function valid(e){
-
-//         e.preventDefault()
-
-    
-
-//    var val =  localStorage.getItem("degree_name")
-
-
-//    console.log("val:", val)
-
-//     }
-
-
-</script> -->

@@ -1,0 +1,14 @@
+
+.small_container{
+
+    
+    height:500px;
+    background-color: blue;
+}
+
+
+#container{
+    height: 1000px;
+
+    background-color: brown;
+}

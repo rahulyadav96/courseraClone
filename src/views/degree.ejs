@@ -1,79 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../css/navBarStyle.css">
+    <link rel="stylesheet" href="css/degree.css">
+    <link rel="stylesheet" href="css/mypagesfooter.css">
 
-    <style>
 
-        .degrees{
-
-            display: flex;
-        
-            width:300px;
-            height:100px;
-            background-color: rgb(223, 223, 111);
-            margin: auto;
-            
-            
-            
-        }
-
-        #container{
-
-            margin:auto;
-           
-
-            display:flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-        
-            max-width: 75%;
-            height: 600px;
-            background-color: wheat;
-        }
-
-       .degrees > p{
-
-        padding-left: 8%;
-        font-size: 20px;
-        padding-top:2%;
-        
-
-        }
-        
-    </style>
 </head>
+
 <body>
 
-<div id = "container"><%degreeList.forEach(degrees => {%>
-    <!-- <button onclick="
-    clickDegree(<%= JSON.stringify(degrees) %>)">Click</button> -->
-<div class="degrees"><p><a href="/explore %>" onclick="clickDegree(<%=JSON.stringify(degrees._id) %>)"><%=degrees.degree_name%></a></p> 
+    <!-- navbar starts here -->
+
+     <!--Nav bar-->
+    
+
+        <!-- navbar ends here -->
+
+
+    <!-- blue area starts  -->
+
+    <div id = "blue">
+        <p>Online Degree Programs</p>
+        <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera_assets.s3.amazonaws.com/premium-hub/banner/Banner_Logo_Main_Hub.png?auto=format%2Ccompress&amp;dpr=1">
+    </div>
+
+    <!-- blue area ends  -->
+
+    <h1 id ="heading1">Find the right online degree for you</h1>
+
+    <div id = "find_right_container">
+        <div class = small_container>
+            <h3>Bachelor's Degrees</h3>
+            <p>Receiving a bachelor's degree can open a path to a career in many fields. You can find affordable online bachelor's degrees from top universities offered on Coursera.</p>
+        </div>
+
+        <div class = small_container>
+            <h3>Postgraduate Studies</h3>
+            <p>In addition to degrees, post graduate study programs may offer a chance to complete graduate level learning without committing to a full degree program.</p>
+        </div>
+
+        <div class = small_container>
+            <h3>Master's Degrees</h3>
+            <p>Receiving a master's degree can open a path to a career in many fields. Whether you are looking to advance your career or change careers and work in a new field, you can find affordable online master's degrees from top universities offered on Coursera.</p>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- //list of Explore more degrees by category starts here -->
+
+    <h2 h2="heading2">Explore more degrees by category</h2>
+
+    <div id="container">
+        <%degreeList.forEach(degrees=> {%>
+
+            <div class="degrees">
+                <p><a href="/explore/<%=degrees._id%>" onclick="clickDegree(<%=JSON.stringify(degrees.degree_name) %>)">
+                        <%=degrees.degree_name%>
+                    </a></p>
+
+            </div>
+
+            <%})%>
+
 
     </div>
 
-<%})%>
+    <!-- footer starts here -->
 
+    <footer>
+        <div class="footer-cont">
+            <div class="ft-uper-box">
+                <div class="ft-left">
+                    <div class="bar">
+                        <div class="bar-t">Couresa</div>
+                        <div><a href="#">About</a></div>
+                        <div><a href="#">What we offer</a></div>
+                        <div><a href="#">Leadership</a></div>
+                        <div><a href="#">Career</a></div>
+                        <div><a href="#">Catalog</a></div>
+                        <div><a href="#">Coursera plus</a></div>
+                        <div><a href="#">Prefessional Certificate</a></div>
+                        <div><a href="#">Degree</a></div>
+                        <div><a href="#">For Students</a></div>
+                        <div><a href="#">For Enterprises</a></div>
+                        <div><a href="#">For Government</a></div>
+                        <div><a href="#">For Campus</a></div>
+                    </div>
+                    <div class="bar">
+                        <div class="bar-t">Community</div>
+                        <div><a href="#">Learners</a></div>
+                        <div><a href="#">Partners</a></div>
+                        <div><a href="#">Developers</a></div>
+                        <div><a href="#">Beta Testers</a></div>
+                        <div><a href="#">Translators</a></div>
+                        <div><a href="#">Blog</a></div>
+                        <div><a href="#">Tech Blog</a></div>
+                        <div><a href="#">Teaching Center</a></div>
+                    </div>
+                    <div class="bar">
+                        <div class="bar-t">More</div>
+                        <div><a href="#">Press</a></div>
+                        <div><a href="#">Investors</a></div>
+                        <div><a href="#">Terms</a></div>
+                        <div><a href="#">Privacy</a></div>
+                        <div><a href="#">Help</a></div>
+                        <div><a href="#">Accessibility</a></div>
+                        <div><a href="#">Contact</a></div>
+                        <div><a href="#">Articals</a></div>
+                        <div><a href="#">Directory</a></div>
+                        <div><a href="#">Affiliates</a></div>
+                    </div>
+                
+                
+                </div>
+               
+                <div class="ft-right">
+                    <div class="apple-store ">
+                        <a href="#"><img src="https://d3njjcbhbojbot.cloudfront.net/web/images/icons/download_on_the_app_store_badge_en.svg" class="dwl"></a>
+                    </div>
+                    <div class="play-store ">
+                        <a href=""><img src="https://d3njjcbhbojbot.cloudfront.net/web/images/icons/en_generic_rgb_wo_45.png" class="dwl"></a>
+                    </div>
+                    <div class="cert">
+                        <a href="#"><img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://d3njjcbhbojbot.cloudfront.net/web/images/icons/2018-B-Corp-Logo-Black-S.png?auto=format%2Ccompress&dpr=1&w=151&h=120&q=40" > </a></div>
+                </div>
+            </div>
+            <hr>
 
-</div>
+            <div class="lower-box">
+                <div class="bf-l">
+                    <span>&copy; 2021 Coursera Inc. All rights reserved.</span>
+                </div>
+                <div class="bf-r">
+                    <div>
+                        <span><a><img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/footer/facebook.png?auto=format%2Ccompress&dpr=1&w=28&h=28&q=40"></a></span>
+                        <span> <a><img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/footer/linkedin.png?auto=format%2Ccompress&dpr=1&w=28&h=28&q=40"></a></span>
+                        <span><a><img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/footer/twitter.png?auto=format%2Ccompress&dpr=1&w=28&h=28&q=40"></a></span>
+                        <span><a><img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/footer/youtube.png?auto=format%2Ccompress&dpr=1&w=28&h=28&q=40"></a></span>
+                        <span><a><img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/footer/instagram.png?auto=format%2Ccompress&dpr=1&w=28&h=28&q=40"></a></span>
+                       
+                    </div>
+                </div>
+                <div class="clear-f"></div>
+            </div>
 
-<script>
- function clickDegree(degrees){
-
-    localStorage.setItem("degree_name", degrees.degree_name)
-
- 
-     window.location ="/explore"
- }
-
-
-    
-</script>
-
-
+        </div>
+    </footer>
     
 </body>
 </html>
+
+
+
+
+
+<!-- </body>
+
+</html> -->
