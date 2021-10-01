@@ -1,0 +1,74 @@
+
+/* style for footer*/
+
+footer{
+    background-color: #f8f8f8;
+    padding: 50px 0;
+}
+.footer-cont{
+    width: 80%;
+    margin: auto;
+}
+.ft-uper-box{
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+}
+.ft-left{
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+    margin-bottom: 50px;
+}
+.ft-right{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.dwl{
+    width: 80%;
+    margin: auto;
+    
+}
+.cert{
+    width: 80%;
+    margin: auto;
+}
+.cert>a>img{
+    width: 50%;
+    margin: auto;
+}
+.bar{
+width: 30%;
+display: flex;
+flex-direction: column;
+gap: 10px;
+}
+.bar div a{
+    text-decoration: none;
+    color: black;
+}
+.bar div a:hover{
+    text-decoration: underline;
+}
+.bar-t{
+    font-weight: bold;
+}
+.bar-t ~div{
+    font-size: 14px;
+}
+
+.lower-box{
+    margin-top: 50px;
+}
+.bf-l{
+    float: left;
+}
+.bf-r{
+    float: right;
+}
+.clear-f{
+    clear: both;
+}
