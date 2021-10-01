@@ -62,13 +62,20 @@ select{
 }
 
 /* style on main course container*/
-#main-coouses-Cont{
+#main-course-Cont{
     width: 80%;
     margin: 50px auto;
 }
-.course-cont >a{
-    color: black;
+.course-cont:hover {
+    cursor: pointer;
+}
+.course-cont:hover h2{
+    text-decoration: underline;
+  
+}
+.course-cont> a{
     text-decoration: none;
+    color: black;
 }
 
 .course{
