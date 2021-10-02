@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Reister Account</title>
+    <link rel="icon" href="https://choose.illinois.edu/images/header-logo.svg?rn=0728T163614" sizes="96x96">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/registration.css">
+
+
+</head>
+
+<body>
+
+    <div id=hrLine></div>
+    <div id="heading">
+        <h3>
+            <%=prog.offered_by%>
+        </h3>
+    </div>
+
+    <div id="logo">
+        <img src=<%=prog.imageUrl %>
+
+        <div class="vl"></div>
+
+        <!-- <p>Graduate College</p> -->
+    </div>
+
+
+    <h1 class="heading2">Register</h1>
+    <div id="paradiv">
+        <div class="vl2"></div>
+        <p class="para">To register for an account, please enter the information requested below.</p>
+    </div>
+
+
+    <div id="content2">
+
+        <form id="form1">
+            <div class="register">
+                <label class="labels">Email Address</label>
+                <input type="email" class="input" id="email" required><br><br>
+
+                <label class="labels">First Name</label>
+                <input type="text" class="input2" id="f_Name" required><br><br>
+
+                <label class="labels">Last Name</label>
+                <input type="text" class="input2" id="l_Name" required><br><br>
+
+                <label class="labels">Birthdate</label>
+                <input type="date" class="input3" id="date" required><br><br>
+
+
+
+
+
+            </div>
+
+            <button onclick="submit_form(event)" id="registerbtn">Register</button>
+
+            <button onclick="check(event)" id="loginbtn" style="visibility: hidden;">Login</button>
+
+            <button onclick="generate(event)" id="generateotp" style="visibility: hidden;">Generate new otp</button>
+
+
+
+
+            <!-- Modal working -->
+
+
+
+
+        </form>
+
+
+
+        <div id="bg-modal">
+            <div class="box-contents">
+
+                <div id="close">+</div>
+                <img src=<%=prog.imageUrl %> alt="">
+
+                <form onsubmit="resetPassword(event)" id="settingPassword">
+
+                    <input id="settingPassword1" type="password" placeholder="Set password" required><br>
+                    <input id="settingPassword2" type="password" placeholder="Confirm password" required><br>
+
+                    <p id="passwordMatch"></p><br>
+
+                    <a href="login_university.html" style="visibility: hidden;" id="continue">continue to login
+                        page</a><br>
+
+
+                    <button id="submitBtn">Submit</a></button>
+                </form>
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+    </div>
+
+    <div class=hrLine2></div>
+
+
+    <div class="blueContainer">
+
+        <div class=last_item>
+            <div>
+
+                <img src=<%=prog.imageUrl %>
+
+            </div>
+
+            <div>
+                <p>
+                    <%= prog.program_name%>
+                </p>
+                <p>
+                    <%= prog.offered_by%>
+                </p>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    </div>
+
+</body>
+
+</html>
+
+<script>
+
+
+
+    let pin = 1234
+
+
+    let count = 0;
+
+    var flag = 0;
+
+    if (localStorage.getItem("persons" != null)) {
+        let persons_data = JSON.parse(localStorage.getItem("persons"))
+        localStorage.setItem("persons", JSON.stringify(persons_data))
+    }
+    var persons_obj = {};
+
+
+    function submit_form(e) {
+
+        e.preventDefault();
+
+
+
+        if (localStorage.getItem("persons") == null) {
+
+            localStorage.setItem("persons", JSON.stringify([]));
+
+        }
+
+        persons_obj = {
+
+            email1: document.getElementById("email").value,
+
+            first_name: document.getElementById("f_Name").value,
+            last_name: document.getElementById("l_Name").value,
+
+
+            birth_day: document.getElementById("date").value
+        }
+
+        // password:document.getElementById("settingPassword1").value
+
+
+        if (persons_obj.email1 == "" || persons_obj.first_name == "" || persons_obj.last_name == "" || persons_obj.birth_day == "") {
+
+            alert("please fill all the required fields")
+            return false;
+        }
+
+        let persons_data = JSON.parse(localStorage.getItem("persons"))
+
+        persons_data.push(persons_obj)
+
+        localStorage.setItem("persons", JSON.stringify(persons_data))
+
+
+        tempPin()
+
+    }
+
+    function tempPin() {
+
+        pin = Math.round(Math.random() * (9999 - 1000 + 1) + 1000)
+
+        console.log("To get started, please Activate your Account and use the following temporary PIN: ", pin)
+
+        let enter = document.createElement("p")
+
+        enter.innerText = "Enter 4 digit otp number"
+
+        enter.id = "enter"
+        let otpBox = document.createElement("input")
+        otpBox.id = "inputBox"
+        otpBox.type = "number";
+        let node = document.getElementById("form1");
+
+        if (count < 1) {
+
+
+            node.insertBefore(otpBox, registerbtn)
+
+            node.insertBefore(enter, registerbtn)
+            count++
+
+        }
+
+        let loginbtn1 = document.getElementById("loginbtn")
+
+        loginbtn1.style.visibility = "visible"
+
+        let registerbtn1 = document.getElementById("registerbtn")
+
+        registerbtn1.style.visibility = "hidden"
+
+    }
+
+    function check(e) {
+
+        e.preventDefault()
+
+        let inputval = document.getElementById("inputBox").value
+
+
+
+        if (inputval == pin) {
+
+            document.getElementById("generateotp").style.visibility = "hidden"
+
+
+
+            alert("sucessful")
+
+            pop_up()
+
+
+        } else {
+
+
+
+            let generateotp1 = document.getElementById("generateotp")
+
+            generateotp1.style.visibility = "visible"
+
+            document.getElementById("enter").innerText = "*WRONG OTP"
+
+
+
+        }
+
+
+
+    }
+
+
+    function generate(e) {
+
+        e.preventDefault()
+
+        document.getElementById("inputBox").value = ""
+
+        document.getElementById("enter").innerText = ""
+
+
+
+        tempPin(e)
+
+
+    }
+
+
+    function pop_up() {
+
+
+
+        document.getElementById("bg-modal").style.display = "flex";
+
+
+    }
+
+    var bttn = document.getElementById("submitBtn")
+
+    let cross = document.getElementById("close")
+
+    cross.addEventListener("click", close_popup)
+
+
+    function close_popup() {
+
+        document.getElementById("bg-modal").style.display = "none";
+    }
+
+
+    function resetPassword(e) {
+
+        e.preventDefault()
+
+        let pass1 = document.getElementById("settingPassword1").value
+
+
+        let pass2 = document.getElementById("settingPassword2").value
+
+
+        if (pass1 == pass2) {
+            persons_obj["password"] = pass1;
+
+            let persons_data = JSON.parse(localStorage.getItem("persons"))
+
+            persons_data[persons_data.length - 1] = (persons_obj)
+
+            localStorage.setItem("persons", JSON.stringify(persons_data))
+
+            flag = 1
+        }
+        else {
+
+            flag = 2
+
+        } if (flag == 1) {
+
+            let passMatch = document.getElementById("passwordMatch")
+
+            passMatch.innerHTML = "password set sucessfully."
+
+            passMatch.style.color = "green"
+
+            document.getElementById("continue").style.visibility = "visible"
+
+
+        } else if (flag == 2) {
+
+            document.getElementById("passwordMatch").style.visibility = "visible"
+
+            document.getElementById("passwordMatch").innerHTML = "*password din't match.Try again"
+
+            document.getElementById("passwordMatch").style.pointerEvents = "none"
+
+            document.getElementById("passwordMatch").style.color = "red"
+
+            document.getElementById("passwordMatch").style.textDecoration = "none"
+
+            let pass1 = document.getElementById("settingPassword1").value = ""
+
+            let pass2 = document.getElementById("settingPassword2").value = ""
+
+
+
+
+        }
+
+    }
+
+</script>

@@ -1,53 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/css/mypagesfooter.css">
+    <link rel="stylesheet" href="/css/explore.css">
 
-    <link rel="stylesheet" href="css/explore.css">
+   
+        
+  
 
-  <style>
 
-      .small_container{
 
-        background-color: blue;
-      }
-  </style>  
-
-       
 </head>
+
 <body>
-    
-    
 
-    
-    <div id = "container"><%explore.programs.forEach(program => {%>
+    <!-- navbar starts -->
 
-        <img src="<%=program.imageUrl%>">
-    
-        <div class="small_container">
-            <p><%=JSON.stringify(program.program_name)%></p> 
+    <!-- navbar ends -->
 
-            <p><%=JSON.stringify(program.offered_by)%></p>
-            <p><%=JSON.stringify(program.duration)%></p>
-            <p><%=JSON.stringify(program.description)%></p>
-            
-    
+    <!-- <after navbar box -->
+
+    <div id="blue">
+        <p>Earn your Favourite degrees online</p>
+        <img
+            src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera_assets.s3.amazonaws.com/premium-hub/banner/Banner_Logo_Category_Hub_Page.png?auto=format%2Ccompress&dpr=1">
+    </div>
+
+    <div>
+        <h1 id = "heading1">Online degree programs from top most schools</h1>
+    </div>
+
+    <div><h2 id = "heading2">Master's Degrees</h2></div>
+
+
+
+
+
+
+    <div id="container"></div>
+    <%explore.programs.forEach(program=> {%>
+        <hr>
+        <div class="box">
+
+            <div id = image><img src="<%=program.imageUrl %>"></div>
+
+            <div class="small_container">
+                <div id="program_details">
+                    <p>
+                        <%=program.program_name%>
+                    </p>
+
+                    <p>
+                        <%=program.offered_by%>
+                    </p>
+                    <p>
+                        <%=program.duration%>
+                    </p>
+                    <p>
+                        <%=program.description%>
+                    </p>
+
+                </div>
+
+                <div id="program_due_on">
+
+                    <p>
+                        <%=program.due_on%>
+                    </p>
+
+                    <p>
+                        <%=program.date_date%>
+                    </p>
+                    <p>
+                        <p><a href="/university_apply/<%=program._id%>" onclick="clickProgram()">
+                            Go to degree
+                        </a></p>
+                    </p>
+
+                </div>
+            </div>
+
         </div>
-    
-    
-    <%})%>
 
 
-</div>
+        <%})%>
+
+
+            </div>
+
+
+            <!-- footer starts here -->
+
+    <footer>
+        <div class="footer-cont">
+            <div class="ft-uper-box">
+                <div class="ft-left">
+                    <div class="bar">
+                        <div class="bar-t">Couresa</div>
+                        <div><a href="#">About</a></div>
+                        <div><a href="#">What we offer</a></div>
+                        <div><a href="#">Leadership</a></div>
+                        <div><a href="#">Career</a></div>
+                        <div><a href="#">Catalog</a></div>
+                        <div><a href="#">Coursera plus</a></div>
+                        <div><a href="#">Prefessional Certificate</a></div>
+                        <div><a href="#">Degree</a></div>
+                        <div><a href="#">For Students</a></div>
+                        <div><a href="#">For Enterprises</a></div>
+                        <div><a href="#">For Government</a></div>
+                        <div><a href="#">For Campus</a></div>
+                    </div>
+                    <div class="bar">
+                        <div class="bar-t">Community</div>
+                        <div><a href="#">Learners</a></div>
+                        <div><a href="#">Partners</a></div>
+                        <div><a href="#">Developers</a></div>
+                        <div><a href="#">Beta Testers</a></div>
+                        <div><a href="#">Translators</a></div>
+                        <div><a href="#">Blog</a></div>
+                        <div><a href="#">Tech Blog</a></div>
+                        <div><a href="#">Teaching Center</a></div>
+                    </div>
+                    <div class="bar">
+                        <div class="bar-t">More</div>
+                        <div><a href="#">Press</a></div>
+                        <div><a href="#">Investors</a></div>
+                        <div><a href="#">Terms</a></div>
+                        <div><a href="#">Privacy</a></div>
+                        <div><a href="#">Help</a></div>
+                        <div><a href="#">Accessibility</a></div>
+                        <div><a href="#">Contact</a></div>
+                        <div><a href="#">Articals</a></div>
+                        <div><a href="#">Directory</a></div>
+                        <div><a href="#">Affiliates</a></div>
+                    </div>
+                
+                
+                </div>
+               
+                <div class="ft-right">
+                    <div class="apple-store ">
+                        <a href="#"><img src="https://d3njjcbhbojbot.cloudfront.net/web/images/icons/download_on_the_app_store_badge_en.svg" class="dwl"></a>
+                    </div>
+                    <div class="play-store ">
+                        <a href=""><img src="https://d3njjcbhbojbot.cloudfront.net/web/images/icons/en_generic_rgb_wo_45.png" class="dwl"></a>
+                    </div>
+                    <div class="cert">
+                        <a href="#"><img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://d3njjcbhbojbot.cloudfront.net/web/images/icons/2018-B-Corp-Logo-Black-S.png?auto=format%2Ccompress&dpr=1&w=151&h=120&q=40" > </a></div>
+                </div>
+            </div>
+            <hr>
+
+            <div class="lower-box">
+                <div class="bf-l">
+                    <span>&copy; 2021 Coursera Inc. All rights reserved.</span>
+                </div>
+                <div class="bf-r">
+                    <div>
+                        <span><a><img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/footer/facebook.png?auto=format%2Ccompress&dpr=1&w=28&h=28&q=40"></a></span>
+                        <span> <a><img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/footer/linkedin.png?auto=format%2Ccompress&dpr=1&w=28&h=28&q=40"></a></span>
+                        <span><a><img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/footer/twitter.png?auto=format%2Ccompress&dpr=1&w=28&h=28&q=40"></a></span>
+                        <span><a><img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/footer/youtube.png?auto=format%2Ccompress&dpr=1&w=28&h=28&q=40"></a></span>
+                        <span><a><img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://s3.amazonaws.com/coursera_assets/footer/instagram.png?auto=format%2Ccompress&dpr=1&w=28&h=28&q=40"></a></span>
+                       
+                    </div>
+                </div>
+                <div class="clear-f"></div>
+            </div>
+
+        </div>
+    </footer>
 
 
 
 
 
-    
+
 </body>
-</html>
 
+</html>

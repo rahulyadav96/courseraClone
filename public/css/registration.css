@@ -1,0 +1,349 @@
+
+#hrLine {
+
+    background-color: rgb(224, 33, 18);
+    height: 8px;
+    margin-bottom: 0;
+}
+
+
+#heading {
+    background-color: rgb(248, 250, 252);
+    margin-top: 0;
+    height: 20px;
+    font-size: 10px;
+    margin-bottom: 30px;
+
+}
+
+#heading>h3 {
+    margin-left: 150px;
+    font-size: 12px;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1.75px;
+    font-weight: 4000;
+    color: black;
+}
+
+/* styling of div containing logo, vl and text starts*/
+
+
+#logo {
+
+    display: flex;
+    margin-left: 10px;
+
+
+}
+
+.vl {
+
+    border-left: 1px solid black;
+    height: 55px;
+    position: absolute;
+    margin-left: 70px;
+    top: 73px;
+
+
+}
+
+#logo>p {
+
+    margin-left: 50px;
+    color: rgb(55, 41, 75);
+    font-size: 17px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 700;
+    margin-top: 10px;
+
+
+
+
+}
+
+#logo>img {
+
+    width: 80px;
+    height: 80px;
+    margin-bottom: 30px;
+    box-shadow: 10px 5px 5px gray;
+    border-radius: 10px;
+    
+
+}
+
+/* styling of div containing logo, vl and text ends*/
+
+/* login heading */
+
+.heading2 {
+
+    margin-left: 170px;
+    color: rgb(19, 41, 75);
+    margin-top: 70px;
+    margin-bottom: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    font-weight: 400;
+
+
+}
+
+
+/* styling of div containing labels and various inputs etc starts */
+
+
+#content2 {
+
+    width: 650px;
+    height: 120px;
+    margin-left: 160px;
+    margin-bottom: 0px;
+    margin-top: 0;
+
+}
+
+
+.para {
+    margin-left: 170px;
+    padding-top: 10px;
+    font-weight: 400;
+    font-family: 'Open Sans';
+    font-size: 15px;
+
+}
+
+.labels {
+    font-size: 15px;
+    font-family: 'Open Sans';
+    font-weight: 400;
+
+}
+
+
+
+
+.input {
+
+
+    margin-left: 50px;
+
+}
+
+.input2 {
+
+
+    margin-left: 73px;
+
+}
+
+.input3 {
+
+    width: 175px;
+
+
+    margin-left: 82px;
+
+}
+
+
+
+
+#loginbtn {
+
+    width: 70px;
+    text-align: center;
+    height: 28px;
+    color: rgb(0, 0, 0);
+    font-size: 12px;
+    font-family: 'Open Sans';
+    font-weight: 700;
+    background-color: rgb(198, 198, 198);
+    line-height: 12px;
+    border: none;
+}
+
+.register {
+    margin-left: 10px;
+    margin-bottom: 0;
+}
+
+/* styling of div containing labels and various inputs etc ends */
+
+
+
+.hrLine2 {
+    margin-top: 150px;
+    height: 8px;
+    background-color: rgb(255, 85, 46);
+}
+
+
+/* styling of div below second horizontal line starts */
+
+.blueContainer {
+
+    background-color: rgb(19, 41, 75);
+    height: 400px;
+
+
+}
+
+.blueContainer>img {
+  
+    
+
+}
+
+.blueContainer>p {
+
+    margin-left: 150px;
+    color: white;
+    font-family: 'Open Sans';
+    font-size: 13.2px;
+    margin-top: 40px;
+    font-weight: 700;
+}
+
+#loginbtn {
+
+    margin-left: 90px;
+}
+
+#enter {
+
+    margin-left: 160px;
+
+    color: red;
+    font-weight: 700;
+
+
+}
+
+#inputBox {
+
+    margin-left: 160px;
+}
+
+
+/* Modal CSS */
+
+.box-contents img {
+
+    width: 110px;
+    height: 80px;
+
+
+}
+
+#bg-modal {
+
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    display: none;
+
+    position: absolute;
+}
+
+.box-contents {
+
+    margin-top: 40px;
+
+    background-color: white;
+    width: 400px;
+    height: 500px;
+    margin-left: 40px;
+    position: relative;
+    text-align: center;
+    border: 2px solid black;
+
+
+}
+
+#settingPassword1 {
+
+    width: 200px;
+    height: 20px;
+
+    margin-top: 40px;
+
+
+}
+
+
+#settingPassword2 {
+
+    width: 200px;
+    height: 20px;
+
+    margin-top: 40px;
+
+
+}
+
+#submitBtn {
+
+    /* font-size: 50px; */
+    width: 200px;
+    height: 40px;
+    margin-top: 40px;
+
+    background-color: seagreen;
+}
+
+
+
+#close {
+
+    width: 50px;
+    height: 40px;
+    transform: rotate(45deg);
+    margin-left: 350px;
+
+    /* position:absolute; */
+
+
+    font-size: 50px;
+    color: red;
+    cursor: pointer;
+}
+
+#continue {
+
+    font-size: 20px;
+    color: blue;
+}
+
+.last_item{
+
+    display:flex;
+    
+
+
+}
+
+.last_item > div > img{
+
+    margin-top: 40px;
+    margin-left: 20px;
+    box-shadow: 10px 5px 5px gray;
+    border-radius: 10px;
+
+}
+
+.last_item  p{
+
+    font-family: 'Open Sans';
+
+    font-size: 28px;
+
+    color:white;
+    margin-left: 20px;
+}
+

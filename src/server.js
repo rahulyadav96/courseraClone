@@ -25,6 +25,13 @@ const insCont = require("./controllers/instructorController");
 const courseCont = require("./controllers/courseController");
 const skillCont  = require("./controllers/skillController");
 
+const universityController = require("./controllers/universityController")
+
+// const registerController = require("./controllers/registerController")
+
+// const signupController = require("./controllers/signupController")
+
+
 //programs and dergree controllers
 
 const programController = require("./controllers/programController")
@@ -32,6 +39,10 @@ const programController = require("./controllers/programController")
 const degreeController = require("./controllers/degreeController")
 
 const exploreController = require("./controllers/exploreController")
+
+const registerController = require("./controllers/registerController")
+
+
 
 app.use("/properties", propCont);
 app.use("/courses", courseCont);
@@ -42,6 +53,12 @@ app.use("/skills", skillCont);
 app.use("/programs", programController)
 
 app.use("/degrees", degreeController)
+
+app.use("/university_apply", universityController)
+
+app.use("/register", registerController)
+
+// app.use("/signup", signupController)
 
 app.use("/explore", exploreController)
 //redirect to all all courses page
