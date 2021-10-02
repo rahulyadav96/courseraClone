@@ -39,6 +39,10 @@ body{
     width: 50%;
 }
 
+.rigth-part{
+    padding-left: 10%;
+}
+
 strong{
     font-size: 30px;
 }
@@ -51,57 +55,65 @@ ul>li>span>a{
 ul>li>span>a:hover{
     text-decoration: underline;
 }
-/*instructor*/
+
+/******************** instructor ************/
 .instructor-profile{
     display: flex;
     gap: 1%;
     margin: 20px 0;
 }
-.inst-name{
-    position: relative;
-    top: 15px;
-    
-}
+
 .inst-name>div>a{
     color: white;
 }
-.img-wraper>a>img{
+
+.img-wraper{
+    width: 5%;
+}
+.img-wraper>img{
     border-radius: 50%;
+    width: 100%;
 }
 .achivement{
     border:1px solid white;
-    border-radius: 1px;
+    border-radius: 2px;
     color: white;
     background-color: blue;
-    font-weight: 10;
-    font-size: 14px;
-    padding: 2px;
+    font-weight: bold;
+    font-size: 0.8rem !important;
+    padding: 2px 5px;
     
 }
-/*style on rating*/
 
+/*style on rating*/
+.star-cont{
+    margin-top: 20px;
+}
 .checked{
-    color: yellow;
+    color: rgb(245, 171, 35);
 }
 /*enrollment's style*/
 .enrollment-wrap{
     margin: 20px 0;
-    width: 50%;
+    width: 40%;
+
 }
 .enroll{
     width: 100%;
-    background-color: white;
-    color:black !important;
+    background-color: blue;
+    color:white !important;
     padding: 5% 10%;
     text-align: center;
     font-size: 15px;
     cursor: pointer;
-    height: 80px;
+    min-height: 80px;
     line-height: 30px;
     border: 0px;
+    font-weight: bold;
+    border-radius: 5px;
 }
 .enroll:hover{
-    background-color: rgba(219, 215, 215,0.5);
+    background-color: navy;
 }
 .free-enroll{
     font-size: 16px;
@@ -113,17 +125,18 @@ ul>li>span>a:hover{
 /* Style on course nav*/
 .course-nav{
     width: 100%;
-    position: sticky;
-    top: 0;
     background-color: white;
     z-index: 1;
     margin: 0;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    border-bottom: 1px solid black;
+    padding: 0;
+    border-bottom: 1px solid rgb(168, 164, 164);
+    position: sticky;
+    top: 0;
 }
 .tabs-con{
     width: 80%;
+    padding-top: 15px;
+    padding-bottom: 15px;
     margin: auto;
     display: flex;
     flex-direction: row;
@@ -137,6 +150,13 @@ ul>li>span>a:hover{
     color: blue;
     text-decoration: underline;
     
+}
+/******* style on Offer by *****/
+.un_logo{
+    width: 70%;
+}
+.un_logo>img{
+    width: 100%;
 }
 
 /*************** info part *************/
@@ -159,10 +179,13 @@ ul>li>span>a:hover{
 .info-cont{
     margin: 20px auto;
 }
+
 .info-cont >p{
-    line-height: 1.6;
-    
+    line-height: 1.5; 
+    margin: 0 auto;
+    text-align: justify;
 }
+
 .crs-prop{
     width: 25%;
     margin-top: 25px;
@@ -170,24 +193,28 @@ ul>li>span>a:hover{
     flex-direction: column;
     gap: 20px;
 }
+
 .crs-prop>div{
     display: flex;
     flex-direction: row;
     gap: 10%;
 }
+
 .prop-icon-con{
     padding: 5px;
 }
+
 .prop-icon-con>i{
     margin: 5px;
     font-size: 30px;
-    color: coral;
-    
+    color: coral;  
 }
+
 .prop-name{
     font-size: 20px;
     font-weight: bold;
 }
+
 .prop-des{
     color: grey;
     font-size: 14px;
@@ -207,14 +234,102 @@ ul>li>span>a:hover{
 }
 .tags{
     display: grid;
-    grid-template-columns: 28% 28% 40%;
-    gap: 2%;
+    grid-template-columns: 25% 25% 25% 25%;
+    margin: 20px auto;
 }
 
 .tags>div{
+    width: 94%;
+    margin: auto;
+    text-align: center;
     background-color: rgb(219, 215, 215);
     margin: auto;
-    padding: 0 10px;
+    
     color: black;
+    border-radius: 15px;
+    height: 50px;
+    vertical-align: center;
+
+}
+.tags>div>p{
+    margin-top: 5%;
+}
+
+/********* instructor *********/
+.instructor_cont{
+    width: 80%;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.part_title{
+    font-size: 2rem;
+}
+.inst_rating{
+    font-size: 1rem;
+    color: grey;
+}
+.instructor_bio{
+    display: flex;
+    flex-direction: row;
+    gap: 3%;
+    margin-top: 20px;
+}
+.ins_pic{
+    width: 12%;
+}
+.ins_pic>img{
+    width: 100%;
     border-radius: 50%;
+}
+.ins_name{
+    font-size: 1.5rem;
+}
+.ins_name:hover{
+    text-decoration: underline;
+    color: blue;
+    cursor: pointer;
+}
+.biodata{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+}
+.occupation{
+    font-size: 1rem ;
+}
+.ach{
+    color: rgb(173, 103, 52);
+    font-size: 1rem;
+}
+/******** univercity **************/
+.un_cont{
+    width: 80%;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.un_data{
+    display: flex;
+    gap: 5%;
+}
+
+.univercity_logo{
+    width: 12%;
+    box-shadow:0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+}
+.univercity_logo>img{
+    width: 100%;
+}
+.un_about{
+    width: 40%;
+    text-align: justify;
+}
+.un_about>p{
+    line-height: 1.5;
+    margin: 0;
 }
