@@ -27,6 +27,7 @@ router.get("", async (req, res) => {
             degreeList: degrees
 
         })
+            
 
 
 
