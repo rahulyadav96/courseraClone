@@ -40,7 +40,7 @@ router.delete("/:id", async(req,res)=>{
 
 //find a singal course
 router.get("/:id", async (req,res)=>{
-    const course = await Course.findById(req.params.id).lean().exec();
+    const course = await Course.findById(req.params.id).populate("univercity").populate("skills").populate("properties").populate("instructor").lean().exec();
 
     //return res.status(200).send({course});
      res.render("./courses/aboutCourse",{

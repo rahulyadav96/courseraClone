@@ -171,7 +171,7 @@
                 <a href="/courses/<%=  course._id%> " target="new">
                         <div class="course">
                             <div class="image-cont">
-                                <img src="<%= course.crs_logo %>" alt="">
+                                <img src="<%= course.crs_logo %>" alt="<%= course.title%>">
                             </div>
                             <div class="info">
                                 <div class="course-title"><h2><%= course.title%></h2></div>
@@ -201,18 +201,11 @@
                        
                 </a> 
                 <hr>
-            </div>
-           
-                    
-            <% } %>
-           
-
-           
-
-            
+            </div>             
+            <% } %>         
     </div>
 
-    <!--footer -->
+    <!-------------------------------footer -------------------->
     <footer>
         <div class="footer-cont">
             <div class="ft-uper-box">
@@ -319,9 +312,5 @@ function filterElement(){
 }
 
 
-//rediret to particular course
-// function aboutCourse(course){
-// console.log(course);
-// window.location.assign(`localhost:3932/courses/${course._id}`);
-// }
+
 </script>
