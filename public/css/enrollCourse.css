@@ -98,6 +98,10 @@ ul>li>span>a:hover{
     width: 40%;
 
 }
+.enroll>a{
+    color: white;
+    text-decoration: none;
+}
 .enroll{
     width: 100%;
     background-color: blue;
@@ -114,6 +118,10 @@ ul>li>span>a:hover{
 }
 .enroll:hover{
     background-color: navy;
+}
+.enroll>a{
+    color: none;
+    text-decoration: none;
 }
 .free-enroll{
     font-size: 16px;

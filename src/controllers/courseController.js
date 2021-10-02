@@ -47,5 +47,11 @@ router.get("/:id", async (req,res)=>{
         course:course
      })
 });
-
+//redirecting on checkout page
+router.get("/:id/checkout", async(req, res)=>{
+    const course = await Course.findById(req.params.id).populate("univercity").populate("skills").populate("properties").populate("instructor").lean().exec();
+    res.render("./courses/courseCheckout",{
+        course:course
+    })
+})
 module.exports = router;

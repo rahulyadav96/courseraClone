@@ -16,12 +16,6 @@ app.use('/js', express.static(__dirname + './public/js'))
 app.use(myLayouts)  
 app.set("view engine", "ejs")
 
-
-//Working for express and views:-
-
-
-
-
 //setting up default view path
 app.set("views", path.join(__dirname, "views"))
 
@@ -46,7 +40,9 @@ const exploreController = require("./controllers/exploreController")
 
 
 
-
+app.get("/makePayment", (req,res)=>{
+   res.render("./courses/makePayment");
+})
 
 app.use("/",indexController)
 // app.get("/", (req, res) => {
