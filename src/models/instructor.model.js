@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const instSchema = new mongoose.Schema({
     name:{type:String, required:true},
-    acheivements:{type:String, required:false},
+    achivements:{type:String, required:false},
     rating:{type:String, required:false},
     img:{type:String, required:true},
     occupation:{type:String, required:true},

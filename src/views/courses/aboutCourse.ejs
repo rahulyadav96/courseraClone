@@ -63,7 +63,10 @@
                 <div class="title">
                     <h1><span><%= course.title %> </span> </h1>
                 </div>
-
+                <% if(course.instructor.tag !== "") {%> 
+                    <b class="ach"><span class="achivement"   title="<%= course.instructor.name %> is rated among the top instructor on Coursera "><b><%= course.instructor.tag %> </b></span></b>
+                        <% } %> 
+                    
                 <div class="star-cont">
                     <span class="fa fa-star checked"></span>
                     <span class="fa fa-star checked"></span>
@@ -73,26 +76,23 @@
                     <span class="no-of-review"> <b><%= course.rating %> </b> ratings</span> 
                 </div>
 
-                <div class="instructor-profile">
-                
-                    <div class="img-wraper">
-                        <a href="#"><img src="<%= course.instructor.img %> " alt="Andrew Ng"></a> 
-                    </div>
-
-                    <div class="inst-name">
-                        <div><a href="#"><%= course.instructor.name %>  <b><span class="achivement" title="<%= course.instructor.name %> is rated among the top instructor on Coursera "><b><%= course.instructor.tag %> </b> </span></b></a></div>
-                    </div>
+                <div>
+                    <p> <span><b><%= course.students %></b></span> already Enrolled</p>
                 </div>
 
+                <div class="instructor-profile">
+                    <div class="inst-name">
+                        <div><b>Instructor(s): </b><%= course.instructor.name %></div>
+                    </div>
+                    <div class="img-wraper">
+                        <img src="<%= course.instructor.img %> " alt="Andrew Ng">
+                    </div>
+                </div>
                 <div class="enrollment-wrap">
                     <button class="enroll" onclick="getEnroll()">
                         <div class="free-enroll">Enroll for Free</div>
                         <div><%= course.starting_date %></div>
                     </button>
-                </div>
-
-                <div>
-                    <p> <span><b><%= course.students %></b></span> already Enrolled</p>
                 </div>
             </div>
 
@@ -108,7 +108,7 @@
     <div class="course-nav" >
         <div class="tabs-con">
             <div><a href="#abt"><span class="tab">About</span></a></div>
-            <div><a href="#"><span class="tab">Instructor</span></a></div>
+            <div><a href="#instructor"><span class="tab">Instructor</span></a></div>
             <div><a href="#"><span class="tab">Syllabus</span></a></div>
             <div><a href="#"><span class="tab">Review</span></a></div>
             <div><a href="#"><span class="tab">Enrollment Options</span></a></div>
@@ -122,7 +122,7 @@
 
         <div class="info-title">
             <h1 id="abt">About the Course</h1>
-            <p><%= course.reviews %> recent view</p>
+            <p><%= course.reviews %> recent views</p>
         </div>
 
        <div class="info-cont">
@@ -184,9 +184,41 @@
         </div>
     </div>
 </div>
+<!---------------- Instructor bio --------------->
+<div class="instructor_cont" id="instructor">
+    <div><span class="part_title">Instructor</span></div>
+    <div><span class="inst_rating">Instructor rating: <%= course.instructor.rating %> </span></div>
+    <div class="instructor_bio">
+        <div class="ins_pic">
+            <img src="<%= course.instructor.img %> " alt="<%= course.instructor.name %>">
+        </div>
+        <div class="biodata">
+            <div ><span class="ins_name"><%= course.instructor.name %></span>
+                <% if(course.instructor.tag !== "") {%> 
+                    <span class="achivement"   title="<%= course.instructor.name %> is rated among the top instructor on Coursera "><b><%= course.instructor.tag %> </b></span>
+                        <% } %> 
+            </div>
+            <div class="occupation"><span><%= course.instructor.occupation %> </span></div>
+            <div class="ach"><span><%= course.instructor.achivements%></span></div>
+        </div>
+    </div>
+</div>
 
-
-    <!--footer -->
+<!------------ univercity  --------------------->
+<div class="un_cont">
+    <div >
+        <span class="part_title">Offered by</span>
+    </div>
+    <div class="un_data">
+        <div class="univercity_logo">
+            <img src="<%= course.univercity.of_logo %>">
+        </div>
+        <div class="un_about">
+            <p><%= course.univercity.about %></p>
+        </div>
+    </div>
+</div>
+<!------------------- footer ------------------->
     <footer>
         <div class="footer-cont">
             <div class="ft-uper-box">
