@@ -1,0 +1,562 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: #FAFAFA;
+    font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif !important;
+}
+
+.clr_blue{
+    color: blue;
+}
+
+.l_clear{
+    clear: left;
+}
+
+.f_clear{
+    clear: both;
+}
+
+
+.nav-bar{
+   
+    background-color: white;
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+.arrow{
+    height: 100px;
+}
+
+.nav{ 
+    /* width: 100px; */
+    width: 7%;
+}
+
+#logo{
+    /* height: 100px; */
+    width: 150px;
+    /* width: 50%; */
+}
+
+.left> div{
+    /* margin: 10px;      */
+    margin: 0.8%;
+    /* margin-top: 20px; */
+    margin-top: 1.7%;
+    float: left;
+}
+#exp_nav{
+    /* margin-left: 30px; */
+    margin-left: 2.1%;
+    /* margin-top: -20px !important; */
+    font-size: 20px;
+    background-color: blue;
+    /* height: 40px; */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    /* padding: 0.8%; */
+    border-radius:5px;
+    cursor: pointer;
+}
+
+
+.icon{
+    width: 10px;
+    filter: invert();
+}
+
+.search_icon{
+    /* height: 20px; */
+    width: 20px;
+    filter: invert();
+    cursor: pointer;
+    /* background-color: black; */
+    /* margin-left: -30px; */
+
+    /* display: inline; */
+    /* margin-top: 10px; */
+    /* background-color: blue; */
+}
+
+#search>input{
+    border:1px solid black;
+    /* width: 300px; */
+    width: 120%;
+    height: 38px;
+    line-height: 40px;
+    outline: none;
+    /* margin: 10px; */
+
+    /* padding: 5px; */
+    border-radius: 5px 0px 0px 5px;
+    /* text-align:center; */
+}
+
+
+#icon_search{
+    padding: 10px;
+    background-color: blue;
+    /* margin-left: -11px; */
+    height: 20px;
+    border: 1px solid black;
+    /* width: 300px; */
+    border-radius: 0px 5px 5px 0px;
+
+}
+
+.right{
+    /* margin-right: 50px; */
+    /* width: 800px; */
+
+    display: flex;
+    /* margin-left: 800px; */
+    margin-left: 62%;
+    /* margin-top: -40px; */
+    margin-top: -3.5%;
+}
+
+.right> li{
+
+  flex-direction: column-reverse;
+    /* margin-right: 100px; */
+    /* margin-top: -30px; */
+    list-style: none;
+    margin-left: 20px;
+    /* font-size: 20px; */
+    cursor: pointer;
+}
+.right>li> button{
+    /* height: 40px; */
+
+    padding: 10px;
+    /* padding: .0.7%; */
+    background-color: blue;
+    color: white;
+    /* margin-top: -20px; */
+    margin-top: -5%;
+
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+#lg{
+    text-decoration: none;
+
+}
+
+hr{
+    margin-top: 2px;
+}
+
+#coursera_for_business > h1, h2, h3, h4, h5, h6,p {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+
+/***************************   Footer   ************************** */
+
+
+#footer{
+    /* /* font-family: "Source Sans Pro", Arial, sans-serif; */
+   /* text-align: center; */
+   line-height: 1.25rem;
+   /* line-height: 20px; */
+   font-size: .875rem;
+   font-family: Source Sans Pro,Arial,sans-serif;
+   width: 90%;
+   background-color: rgb(245, 245, 245);
+   padding-top: 64px;
+   padding-bottom: 64px;
+   padding-left: 5%;
+   padding-right: 5%;
+   margin: 0px auto;
+   max-width: 100%; 
+/* font-family: Helvetica Neue,Helvetica,Arial,sans-serif; */
+       /* font-size: 14px;
+   line-height: 1.428571429;
+   color: #333;
+   background-color: #fff; */
+
+
+}
+
+.footer_top{
+   display: grid;
+   grid-template-columns: 23% 23% 23% 23%;
+
+   /* grid-gap: 2%; */
+
+}
+
+.footer_bottom_left{
+
+   width: 700px;
+   color: #1f1f1f;
+
+   display: grid;
+   grid-template-columns:35% 35% 35% ;
+   /* grid-gap: 5%; */
+   margin-top: 100px;
+   float: left;
+   /* border:2px solid black */
+
+}
+
+.footer_bottom_right{
+   margin-top: -250px;
+   margin-right: 300px;
+
+   /* margin-top: 100px; */
+   float: right;
+   /* border:2px solid black */
+
+}
+
+.footer_bottom_right > img{
+   cursor: pointer;
+
+}
+/* .footer_bottom_right{
+/* margin-top: 20px; */
+
+#google_store{
+   margin-top: 20px;
+   margin-bottom: 20px;
+   height: 40px;
+   width: 135px;
+   cursor: pointer;
+}
+
+.footer-main{
+   /* width: 1200px; */
+   width: 95%;
+}
+
+.footer_main_left{
+   float: left;
+   /* margin-top: 50px; */
+   margin-top: 3.5%;
+   /* color: red; */
+}
+.footer_main_right{
+
+   float: right;
+   /* margin-right: 200px; */
+   margin-right: 15%;
+   /* margin-top: -40px; */
+   margin-top: -2.5%;
+   
+   
+}
+.footer_main_right >img{
+   
+   height: 50px;
+   width: 50px;
+   filter: grayscale();
+   border-radius: 25px;
+
+}
+
+/* css for firstdiv */
+#firstdiv {
+    height: 100vh;
+    width: 100%;
+    background-color: #dbeef6;
+}
+#share {
+    height: 5%;
+    width: 8%;
+    float: right;
+}
+#round {
+    background-color: #2a73cc;
+    border-radius: 100%;
+    width: 20%;
+    height: 100%;
+    float: left;
+}
+#round img {
+    width: 70%;
+   margin-left: 15%;
+}
+#sharetxt{
+    width: 70%;
+    /* margin-left: 10%; */
+    color: #2a73cc;
+    font-weight: bold;
+    float: right;
+}
+
+
+#firstdiv_cont {
+    height: 70%;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-top: 7%;
+    margin-bottom: 5%;
+    /* background-color: #1A237E; */
+}
+#firstdiv_left {
+    float: left;
+    width: 50%;
+    height: 95%;
+}
+#upper {
+    height: 50%;
+    margin-top: -4%;
+    color: #373a3c;
+    
+}
+#thekedar {
+    font-size: 34px;
+    line-height: 40px;
+}
+#upper p {
+    font-size: 14px;
+}
+#lower2 p {
+    font-size: 14px;
+    font-weight: bold;
+}
+#lower2 {
+    margin-top: 5%;
+    height: 50%;
+}
+#input_start {
+    width: 70%;
+    height: 25%;
+}
+#input_start button {
+    float: left;
+    width: 28%;
+    height: 100%;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    background-color: rgb(42, 115, 204);
+    border: 1px solid rgb(42, 115, 204);
+    padding: 0.9rem 2rem;
+    font-size: 1rem;
+}
+#lwer a {
+    text-decoration: underline;
+    font-size: 12px;
+    color: #1f1f1f;
+    margin-top: 14px;
+    display: block;
+}
+#injustified {
+    float: left;
+    height: 89%;
+    width: 69%;
+    border: 0.1% solid #ccd1d9;
+}
+#firstdiv_right {
+    float: right;
+    width: 50%;
+    height: 95%;
+   }
+#firstdiv_right img {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 5%;
+}
+
+/* css for uni */
+#uni {
+    height: 45vh;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5%;
+    margin-bottom: -8%;
+    
+}
+
+#uni h6 {
+    margin-top: 5%;
+    text-align: center;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: black;
+}
+
+#hwe {
+    width: 95%;
+    margin-bottom: 4%;
+}
+
+#uni div {
+    height: 15%;
+    width: 10.5%;
+    margin: 1%;
+    float: left;
+}
+
+#uni div img {
+    height: 100%;
+    margin: auto;
+
+}
+#ibm img {
+    height: 70%;
+}
+
+  /* css for how companies use coursera */
+  #com {
+    height: 40vh;
+    width: 90%;
+    margin: auto;
+    padding-bottom: 10%;
+    margin-bottom: 10%;
+    border-top:1px solid grey ;
+}
+
+#com_head h1 {
+    margin-top: 5%;
+    text-align: center;
+    font-size: 30px;
+    line-height: 48px;
+    font-weight: bold;
+    color: #373a3c;
+}
+#com_head p {
+    text-align: center;
+    /* color: #373a3c; */
+}
+
+#com_body {
+    margin-top: 5%;
+    height: 60vh;
+}
+
+.com_box {
+    /* border: 1px solid red; */
+    float: left;
+    width: 31.32%;
+    height: 70%;
+    margin: 1%;
+}
+
+.icon2 {
+    height: 35%;
+}
+
+.img_icon {
+    width: 20%;
+    margin-left: 40%;
+    padding-bottom: 5%;
+}
+
+.com_det {
+    width: 95%;
+    height: 23%;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    color: #1f1f1f;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0px auto 8px;
+}
+.comma {
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    color: #373a3c;  
+}
+/* css for testimonial */
+#testimonial {
+    width: 100%;
+    height: 50vh;
+    background-color: #f4eddf;
+}
+#tees {
+    height: 100%;
+    width: 90%;
+    margin: auto;
+}
+#testpic {
+    height: 80%;
+    width: 30%;
+    margin-top: 2.5%;
+    margin-left: 2.5%;
+    float: left;
+}
+#testpic img {
+    border-radius: 50%;
+    display: block;
+    margin: 0px auto;
+    width: 230px;
+    height: 230px;
+    object-fit: cover;
+    object-position: 0px 10%;
+}
+#testimonText {
+    height: 80%;
+    width: 65%;
+    margin-top: 2.5%;
+    float: right;
+}
+#invertedComma {
+    width: 10%;
+    height: 5%;
+    float: left;
+    font-size: 48px;
+    color: rgb(68, 146, 227);
+}
+#tText {
+    font-size: 16px;
+    line-height: 30px;
+    margin-top: 30px;
+    color: #373a3c;
+}
+/* css for percentage */
+#percentage {
+    height: 70vh;
+    width: 100%;
+    /* background-color: red; */
+    color: #373a3c;
+    text-align: center;
+}
+#percentage h1{
+    margin-top: 6%;
+    font-size: 28px;
+}
+.boxp {
+    float: left;
+    width: 30%;
+    height: 30vh;
+    margin: 1.6%;
+    /* background-color: #0056d2; */
+}
+.bigp {
+    text-align: center;
+    font-size: 48px;
+    font-weight: 700;
+    margin: 0px 0px 8px;
+    color: rgb(68, 146, 227);
+}
+.bigptext {
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+}
+#gflight {
+    color: gray;
+}
