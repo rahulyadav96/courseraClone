@@ -1,19 +1,15 @@
 const express = require("express");
 const path = require("path")
 const connect = require("./config/db");
-const ejs = require('ejs');
-const myLayouts = require('express-ejs-layouts');
-
+const Course = require("./models/course.model");
 
 const app = express()
-const port = 3932;
+const port = 8080;
 app.use(express.json())
 //static files
 
 app.use(express.static("public"));
-app.use('/css', express.static(__dirname + './public/css'))
-app.use('/js', express.static(__dirname + './public/js'))
-app.use(myLayouts)  
+  
 app.set("view engine", "ejs")
 
 //setting up default view path
@@ -23,7 +19,6 @@ app.use(express.urlencoded({ extended: false}))
 
 
 //controllers
-const indexController = require("./controllers/indexController")
 const propCont = require("./controllers/propController");
 const unCont = require("./controllers/univercityCont");
 const insCont = require("./controllers/instructorController");
@@ -38,17 +33,6 @@ const degreeController = require("./controllers/degreeController")
 
 const exploreController = require("./controllers/exploreController")
 
-
-
-app.get("/makePayment", (req,res)=>{
-   res.render("./courses/makePayment");
-})
-
-app.use("/",indexController)
-// app.get("/", (req, res) => {
-//     // res.sendFile('courseraColone/index.html')
-//     res.render("index",{title :'Home Page'})
-// })
 app.use("/properties", propCont);
 app.use("/courses", courseCont);
 app.use("/univercities",unCont);
@@ -60,7 +44,31 @@ app.use("/programs", programController)
 app.use("/degrees", degreeController)
 
 app.use("/explore", exploreController)
+//redirect to all all courses page
 
+app.get("/", async(req, res) => { 
+    const courses = await Course.find().lean().exec();
+    res.render("./index",{
+        courses:courses
+    })
+});
+
+//payment page redirection
+
+app.get("/makePayment", (req,res)=>{
+    res.render("./courses/makePayment");
+ });
+
+//on enterprise
+app.get("/enterprise", (req, res)=>{
+    res.render("enterprise");
+});
+
+//on students page
+
+app.get("/students",(req,res)=>{
+    res.render("students");
+})
 
 //server running on
 app.listen(port, async()=>{

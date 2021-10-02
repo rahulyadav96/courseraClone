@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="icon" href="img/coursera tab logo.png" type="image/x-icon"> -->
+    <link rel="icon" href="https://d3njjcbhbojbot.cloudfront.net/web/images/favicons/favicon-v2-96x96.png"
+        sizes="96x96">
+    <link rel="stylesheet" href="css/styleSutdents.css">
+    <title>Coursera</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="nav-bar">
+            <div class="left">
+
+                <div>
+                   <a href="#"> <img class="nav" id="logo" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE2LjIuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHZpZXdCb3g9IjAgMCAxMTU1IDE2NCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLW1pdGVybGltaXQ9IjIiPjxwYXRoIGQ9Ik0xNTkuNzUgODEuNTRjMC00NC40OSAzNi42My04MC40NyA4Mi40My04MC40NyA0Ni4xMiAwIDgyLjc2IDM2IDgyLjc2IDgwLjQ3IDAgNDQuMTYtMzYuNjQgODAuOC04Mi43NiA4MC44LTQ1LjggMC04Mi40My0zNi42OC04Mi40My04MC44em0xMjUuNjEgMGMwLTIyLjI0LTE5LjMtNDEuODctNDMuMTgtNDEuODctMjMuNTUgMC00Mi44NSAxOS42My00Mi44NSA0MS44NyAwIDIyLjU3IDE5LjMgNDIuMiA0Mi44NSA0Mi4yIDIzLjkyIDAgNDMuMTgtMTkuNjMgNDMuMTgtNDIuMnptNzA1LjYzIDEuMzFjMC00OC43NCAzOS41OC04MS43OCA3NS41Ny04MS43OCAyNC41MyAwIDM4LjYgNy41MiA0OC4wOCAyMS45MmwzLjc3LTE5aDM2Ljc5djE1NS40aC0zNi43OWwtNC43NS0xNmMtMTAuNzkgMTEuNzgtMjQuMjEgMTktNDcuMSAxOS0zNS4zMy0uMDUtNzUuNTctMzEuMTMtNzUuNTctNzkuNTR6bTEyNS42MS0uMzNjLS4wOS0yMy41MjctMTkuNDctNDIuODM1LTQzLTQyLjgzNS0yMy41OSAwLTQzIDE5LjQxMS00MyA0M3YuMTY1YzAgMjEuNTkgMTkuMyA0MC44OSA0Mi44NiA0MC44OSAyMy44NSAwIDQzLjE0LTE5LjMgNDMuMTQtNDEuMjJ6TTk0NS43OCAyMlY0aC00MC4yM3YxNTUuMzloNDAuMjNWNzUuNjZjMC0yNS4xOSAxMi40NC0zOC4yNyAzNC0zOC4yNyAxLjQzIDAgMi43OS4xIDQuMTIuMjNMOTkxLjM2LjExYy0yMC45Ny4xMS0zNi4xNyA3LjMtNDUuNTggMjEuODl6bS00MDQuMjcuMDF2LTE4bC00MC4yMy4wOS4zNCAxNTUuMzcgNDAuMjMtLjA5LS4yMi04My43MmMtLjA2LTI1LjE4IDEyLjM1LTM4LjI5IDMzLjkzLTM4LjM0IDEuMzc2LjAwNCAyLjc1Mi4wODEgNC4xMi4yM0w1ODcuMSAwYy0yMSAuMTctMzYuMjIgNy4zOS00NS41OSAyMi4wMXpNMzM4Ljg4IDk5LjJWNC4wMWg0MC4yMlY5NC4zYzAgMTkuOTUgMTEuMTIgMzEuNzMgMzAuNDIgMzEuNzMgMjEuNTkgMCAzNC0xMy4wOSAzNC0zOC4yOFY0LjAxaDQwLjI0djE1NS4zOGgtNDAuMjF2LTE4Yy05LjQ4IDE0LjcyLTI0Ljg2IDIxLjkyLTQ2LjEyIDIxLjkyLTM1Ljk4LjAxLTU4LjU1LTI2LjE2LTU4LjU1LTY0LjExem0zOTEuNzQtMTcuNDhjLjA5LTQzLjUxIDMxLjIzLTgwLjc0IDgwLjYyLTgwLjY1IDQ1LjguMDkgNzguMTEgMzYuNzggNzggODAgLjAxIDQuMjczLS4zMyA4LjU0LTEgMTIuNzZsLTExOC40MS0uMjJjNC41NCAxOC42NSAxOS44OSAzMi4wOSA0My4xMiAzMi4xNCAxNC4wNiAwIDI5LjEyLTUuMTggMzguMy0xNi45NGwyNy40NCAyMmMtMTQuMTEgMTkuOTMtMzkgMzEuNjYtNjUuNDggMzEuNjEtNDYuNzUtLjE2LTgyLjY3LTM1LjIzLTgyLjU5LTgwLjd6bTExOC4xMi0xNi4xNGMtMi4yNi0xNS43LTE4LjU5LTI3Ljg0LTM3Ljg5LTI3Ljg3LTE4LjY1IDAtMzMuNzEgMTEuMDYtMzkuNjMgMjcuNzNsNzcuNTIuMTR6bS0yNjEuNCA1OS45NGwzNS43Ni0xOC43MmM1LjkxIDEyLjgxIDE3LjczIDIwLjM2IDM0LjQ4IDIwLjM2IDE1LjQzIDAgMjEuMzQtNC45MiAyMS4zNC0xMS44MiAwLTI1LTg0LjcxLTkuODUtODQuNzEtNjcgMC0zMS41MiAyNy41OC00OC4yNiA2MS43Mi00OC4yNiAyNS45NCAwIDQ4LjkyIDExLjQ5IDYxLjQgMzIuODNsLTM1LjQ0IDE4Ljc1Yy01LjI1LTEwLjUxLTE1LjEtMTYuNDItMjcuNTgtMTYuNDItMTIuMTQgMC0xOC4wNiA0LjI3LTE4LjA2IDExLjQ5IDAgMjQuMyA4NC43MSA4Ljg3IDg0LjcxIDY3IDAgMzAuMjEtMjQuNjIgNDguNTktNjQuMzUgNDguNTktMzMuODItLjAzLTU3LjQ2LTExLjE5LTY5LjI3LTM2Ljh6TTAgODEuNTRDMCAzNi43MyAzNi42My43NCA4Mi40My43NGMyNy45NDctLjE5NiA1NC4xODIgMTMuNzM3IDY5LjY3IDM3bC0zNC4zNCAxOS45MmE0Mi45NzIgNDIuOTcyIDAgMDAtMzUuMzMtMTguMzJjLTIzLjU1IDAtNDIuODUgMTkuNjMtNDIuODUgNDIuMiAwIDIyLjU3IDE5LjMgNDIuMiA0Mi44NSA0Mi4yYTQyLjUwMiA0Mi41MDIgMCAwMDM2LjMxLTIwbDM0IDIwLjI4Yy0xNS4zMDcgMjMuOTU1LTQxLjkwMiAzOC40MzEtNzAuMzMgMzguMjhDMzYuNjMgMTYyLjM0IDAgMTI1LjY2IDAgODEuNTR6IiBmaWxsPSIjMDA1NkQyIiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48L3N2Zz4=" alt="logo"></a>
+                </div>
+
+                <div id="exp_nav">
+
+                    <span>Explore <img  class="icon" src="img/down-chevron.png" alt="Down Arrow"></span>
+                    
+                </div>
+
+                <div id="search">
+                    <!-- <span>What do you want to learn ?</span> -->
+                    <input type="text" id="search_input" placeholder="What do you want to learn ?">
+                    <!-- <div> -->
+                        <!-- <img src="img/search.png"  class="search_icon" alt=""> -->
+                    <!-- </div> -->
+
+                </div>
+
+                <div id="icon_search">
+                        <img src="img/search.png" class="search_icon" alt="">
+
+                </div>
+             
+            </div>
+            <div class="f_clear"></div>
+            <div class="right">
+
+                <li><a href="Alimul/enterprise.html" style="text-decoration: none;"> For Enterprise </a></li>
+                <li><a href="students.html" style="text-decoration: none;"> For Student </a></li>
+                <li><a href="Sagar Dhyani/coursera_login.html" id="lg"> Login</a></li>
+                <li><button id="join_free1"> Join for Free</button></li>
+               
+            </div>
+            <div class="f_clear"></div>
+            <hr class="hed">
+            
+        </div>
+        
+        <div id="firstdiv">
+            <div id="firstdiv_cont">
+                <div id="share">
+                    <div id="round"><img src="img/share.png" alt=""></div>
+                    <div id="sharetxt"> Share</div>
+                </div>
+                <div class="f_clear"></div>
+                <div id="firstdiv_left">
+                    <div id="upper">
+                        <h1 id="thekedar">University and college students, learn job-ready skills for free with Coursera
+                            for Campus
+                        </h1>
+                        <p>Our free Coursera for Campus Student plan helps you build skills to add to your resume with
+                            unlimited Guided Projects and 1 free course per year</p>
+                    </div>
+                    <div id="lower2">
+                        <p>Enter your school email to get started.</p>
+                        <br>
+                        <p>Ensure the address is correct before submitting. You will be required to verify your address
+                            before joining the program.</p>
+                        <br>
+                        <div id="input_start"><input type="text" id="injustified"> <button>Start</button></div>
+                        <div class="f_clear"><br></div>
+                        <div id="lwer"><a
+                                href="https://www.coursera.org/campus/basic/?utm_campaign=c4s&utm_content=c4cs-hero-cta-to-basic&utm_medium=website&utm_source=for-university-and-college-students">Working
+                                at a university? See how to help your school.</a></div>
+                    </div>
+                </div>
+                <div id="firstdiv_right">
+                    <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera_assets.s3.amazonaws.com/student-upswell/header-marketing.png?auto=format%2Ccompress&dpr=2&w=&h="
+                        alt="">
+                </div>
+                <div class="f_clear"></div>
+            </div>
+        </div>
+
+        <div id="uni">
+            <h6 id="hwe">Try a free course today from one of 200+ world-class universities and companies</h6>
+            <div><img
+                    src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera_assets.s3.amazonaws.com/front-page-story/partners/yale.png?auto=format%2Ccompress&dpr=2&w=&h=37"
+                    alt=""></div>
+            <div><img
+                    src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera_assets.s3.amazonaws.com/front-page-story/partners/google.png?auto=format%2Ccompress&dpr=2&w=&h=37"
+                    alt=""></div>
+            <div><img
+                    src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera_assets.s3.amazonaws.com/front-page-story/partners/UoL.png?auto=format%2Ccompress&dpr=2&w=&h=37"
+                    alt=""></div>
+            <div><img
+                    src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera_assets.s3.amazonaws.com/coursera_plus/sas-logo.png?auto=format%2Ccompress&dpr=2&w=&h=32"
+                    alt=""></div>
+            <div><img
+                    src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera_assets.s3.amazonaws.com/front-page-story/partners/duke.svg?auto=format%2Ccompress&dpr=2&w=&h=37"
+                    alt="">
+            </div>
+            <div id="ibm"><img
+                    src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera_assets.s3.amazonaws.com/coursera_plus/IBM_logo.png?auto=format%2Ccompress&dpr=2&w=&h=70"
+                    alt=""></div>
+            <div><img
+                    src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera_assets.s3.amazonaws.com/front-page-story/partners/isb.png?auto=format%2Ccompress&dpr=2&w=&h=37"
+                    alt="">
+            </div>
+            <div><img
+                    src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera_assets.s3.amazonaws.com/front-page-story/partners/tecnologico-de-monterrey.png?auto=format%2Ccompress&dpr=2&w=&h=37"
+                    alt=""></div>
+        </div>
+        <div id="com">
+            <div id=com_head>
+                <h1>Master in-demand skills quickly</h1>
+                <p>Build and practice skills that will set your resume apart</p>
+            </div>
+            <div id="com_body">
+                <div class="com_box">
+                    <div class="icon2">
+                        <img class="img_icon" alt="Deliver on strategic business goals by building critical skills "
+                            src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera_assets.s3.amazonaws.com/coursera_plus/landing_page/university.png?auto=format%2Ccompress&dpr=2&w=&h=55">
+                    </div>
+                    <p class="com_det">Learn from top instructors</p>
+                    <p class="comma">Stream on-demand video lectures from leading universities and companies like Yale,
+                        Google, IBM, and more.</p>
+                </div>
+                <div class="com_box">
+                    <div class="icon2">
+                        <img class="img_icon" alt="Realize the full value of technology investments "
+                            src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera_assets.s3.amazonaws.com/coursera_plus/landing_page/head.png?auto=format%2Ccompress&dpr=2&w=&h=55">
+                    </div>
+                    <p class="com_det">Gain skills through hands-on learning</p>
+                    <p class="comma">Learn in-demand skills in data science, design, project management, digital
+                        marketing, and more in under two hours with Guided Projects.</p>
+                </div>
+                <div class="com_box">
+                    <div class="icon2">
+                        <img class="img_icon" alt="Build a data-driven, digitally-fluent workforce "
+                            src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera_assets.s3.amazonaws.com/coursera_plus/landing_page/certificate.png?auto=format%2Ccompress&dpr=2&w=&h=40">
+                    </div>
+                    <p class="com_det">Earn and share a valued certificate</p>
+                    <p class="comma">Showcase your new abilities with a certificate for a course, Guided Project, or
+                        Professional Certificate.</p>
+                </div>
+            </div>
+        </div>
+        <div id="testimonial">
+            <div id="tees">
+                <div id="testpic"> <img
+                        src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://coursera_assets.s3.amazonaws.com/growth_testimonials/passionate_learner/Isabella_Venturium_Teixeira.jpeg?auto=format%2Ccompress&dpr=2&w=&h="
+                        alt=""></div>
+                <div id="testimonText">
+                    <div id="invertedComma">“</div>
+                    <div id="tText">
+                        <p class="_ktstll"><span><strong>I was able to apply to an internship because of a new skill I
+                                    developed with a Coursera course!</strong> It may be a small step for some people,
+                                but before, I wasn't even able to apply, and now, <strong>I have opened many doors for
+                                    my professional future!</strong></span></p>
+                        <br>
+                        <p>- Isabella Venturim Teixeira</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="percentage">
+            <h1>More than 70 million people are already learning on Coursera.</h1>
+            <p>See how they're achieving their goals:</p>
+            <div>
+                <div class="boxp">
+                    <div class="bigp">87%</div>
+                    <div class="bigptext"><span><strong>of career seekers report benefits</strong> like launching a career path or starting a new career</span></div>
+                </div>
+                <div class="boxp">
+                    <div class="bigp">92%</div>
+                    <div class="bigptext"><span><strong>of education seekers report benefits</strong> like successfully preparing for an exam or committing to an area of study</span></div>
+                </div>
+                <div class="boxp">
+                    <div class="bigp">78%</div>
+                    <div class="bigptext"><span><strong>of all learners report more confidence</strong> after learning on Coursera</span></div>
+                </div>
+                
+            </div>
+            <p>Source: Coursera Learner Outcomes Survey* 2020</p>
+            <p id="gfligft">*The Coursera Learner Outcomes Survey is sent to learners 6 months after they complete a course on Coursera.</p>
+        </div>
+        <div id="footer">
+
+            <div class="footer_top">
+
+                <h3>Start or advance your career</h3>
+                <h3>Browse popular topics</h3>
+                <h3>Upskill your team</h3>
+                <h3>Earn a degree or certificate online</h3>
+
+
+                <p>Google Data Analyst</p>
+                <p>Free Courses</p>
+                <p>Skills for Data Science Teams</p>
+                <p>MasterTrack® Certificates</p>
+
+                <p>Google Project Management</p>
+                <p>Learn a Language</p>
+                <p>Data Driven Decision Making</p>
+                <p>Professional Certificates</p>
+
+                <p>Google UX Design</p>
+                <p>Python</p>
+                <p>Software Engineering Skills</p>
+                <p>University Certificates</p>
+
+                <p>Google IT Support</p>
+                <p>Java</p>
+                <p>Soft Skills for Engineering Teams</p>
+                <p>MBA & Business Degrees</p>
+
+                <p>IBM Data Science</p>
+                <p>Web Design</p>
+                <p>Management Skills</p>
+                <p>Data Science Degrees</p>
+
+                <p>IBM Data Analyst</p>
+                <p>SQL</p>
+                <p>Marketing Skills</p>
+                <p>Computer Science Degrees</p>
+
+                <p>IBM Data Analytics with Excel and R</p>
+                <p>Cursos Gratis</p>
+                <p>Skills for Sales Teams</p>
+                <p>Data Analytics Degrees</p>
+
+                <p>IBM Cybersecurity Analyst</p>
+                <p>Microsoft Excel</p>
+                <p>Product Manager Skills</p>
+                <p>Public Health Degrees</p>
+
+                <p>Facebook Social Media Marketing</p>
+                <p>Project Management</p>
+                <p>Skills for Finance</p>
+                <p>Social Sciences Degrees</p>
+
+                <p>IBM Full Stack Cloud Developer</p>
+                <p>Cybersecurity</p>
+                <p>Android Development Projects</p>
+                <p>Management Degrees</p>
+
+
+                <p>Salesforce Sales Development Representative</p>
+                <p>Human Resources</p>
+                <p>TensorFlow and Keras Projects</p>
+                <p>Degrees from Top European Universities</p>
+
+                <p>Salesforce Sales Operations</p>
+                <p>Data Science Free Courses</p>
+                <p>Python for Everybody</p>
+                <p>Master's Degrees</p>
+
+                <p>Soporte de Tecnologías de la <br> Información de Google</p>
+                <p>Speaking English</p>
+                <p>Deep Learning</p>
+                <p>Bachelor's Degrees</p>
+
+                <p>Certificado profesional de <br> Suporte em TI do Google</p>
+                <p>Content Writing</p>
+                <p>Excel Skills for Business</p>
+                <p>Degrees with a Performance Pathway</p>
+
+                <p>Google IT Automation with Python</p>
+                <p>Full Stack Web Development</p>
+                <p>Business Foundations</p>
+                <p>Bsc Courses</p>
+
+                <p>DeepLearning.AI Tensorflow</p>
+                <p>Artificial Intelligence</p>
+                <p>Machine Learning</p>
+                <p>What is a Bachelor's Degree?</p>
+
+                <p>Popular Cybersecurity Certifications</p>
+                <p>C Programming</p>
+                <p>AWS Fundamentals</p>
+                <p>How Long Does a Master's Degree Take?</p>
+
+                <p>Popular SQL Certifications</p>
+                <p>Communication Skills</p>
+                <p>Data Engineering Foundations</p>
+                <p>Is an Online MBA Worth It</p>
+
+                <p>Popular IT Certifications</p>
+                <p>Blockchain</p>
+                <p>Data Analyst Skills</p>
+                <p>7 Ways to Pay for Graduate School</p>
+
+                <p>See all certificates</p>
+                <p>See all courses</p>
+                <p>Skills for UX Designers</p>
+                <p>See all degrees</p>
+
+                <div class="f_clear"></div>
+            </div>
+
+
+            <div class="footer_bottom_left">
+                <h1>Coursera</h1>
+                <h1>Community</h1>
+                <h1>More</h1>
+
+
+                <p>About</p>
+                <p>Learners</p>
+                <p>Press</p>
+
+                <p>What We Offer</p>
+                <p>Partners</p>
+                <p>Investors</p>
+
+                <p>Leadership</p>
+                <p>Developers</p>
+                <p>Terms</p>
+
+                <p>Careers</p>
+                <p>Beta Testers</p>
+                <p>Privacy</p>
+
+                <p>Catalog</p>
+                <p>Translators</p>
+                <p>Help</p>
+
+                <p>Coursera Plus</p>
+                <p>Blog</p>
+                <p>Accessibility</p>
+
+                <p>Professional Certificates</p>
+                <p>Tech Blog</p>
+                <p>Contact</p>
+
+                <p>MasterTrack® Certificates</p>
+                <p>Teaching Center</p>
+                <p>Articles</p>
+
+                <p>Degrees</p>
+                <p></p>
+                <p>Directory</p>
+
+                <p>For Enterprise</p>
+                <p></p>
+                <p>Affiliates</p>
+
+
+            </div>
+            <div class="f_clear"></div>
+
+
+            <div class="footer_bottom_right">
+                <img src="img/app Store.svg" alt="App store"><br>
+                <img src="img/google Store.png" id="google_store" alt="Google store"><br>
+                <img src="img/certified corporation logo.png" alt="Certified Corporation">
+
+            </div>
+            <div class="f_clear"></div>
+            <hr>
+
+            <div class="footer_main">
+                <div class="footer_main_left">
+                    <p>© 2021 Coursera Inc. All rights reserved.</p>
+                </div>
+                <div class="f_clear"></div>
+
+                <div class="footer_main_right">
+                    <img src="img/Facebook-f_Logo-Black-Logo.wine.png" alt="FaceBook">
+                    <img src="img/LinkedIn-Icon-Black-Logo.wine.png" alt="Linkdin">
+                    <img src="img/Twitter-Logo.wine.png" alt="Twitter">
+                    <img src="img/YouTube-Icon-Almost-Black-Logo.wine.png" alt="You tube">
+                    <img src="img/Instagram-Glyph-Black-Logo.wine.png" alt="Instagram">
+                </div>
+                <div class="f_clear"></div>
+
+
+            </div>
+
+
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- <script type="text/javascript" src="path-to-javascript-file.js"></script -->
+
+</body>
+
+</html>

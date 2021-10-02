@@ -8,15 +8,13 @@
     <!-- <link rel="icon" href="img/coursera tab logo.png" type="image/x-icon"> -->
     <link rel="icon" href="https://d3njjcbhbojbot.cloudfront.net/web/images/favicons/favicon-v2-96x96.png"
         sizes="96x96">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Coursera</title>
 </head>
 
 <body>
-
+    <%- include("partials/navbar")%>
     <div class="container">
-
-
         <div id="mid">
             <div class="left_mid">
                 <p id="mid_font">Learn Without <br> Limits </p>
@@ -383,7 +381,7 @@
 
         <div class="degree_exp">
             <div>
-                <a href="freeCourses.html"><span>Explore Free Courses </span></a>
+                <a href="/courses"><span>Explore Free Courses </span></a>
             </div>
             <div>
                 <img class="right_arrow" src="img/right.png" alt="right Arrow"
@@ -524,198 +522,7 @@
         </div>
 
         <!-- *********************************************************************************************** -->
-        <!-- <div id="footer">
-
-                <div class="footer_top">
-
-                    <h3>Start or advance your career</h3>
-                    <h3>Browse popular topics</h3>
-                    <h3>Upskill your team</h3>
-                    <h3>Earn a degree or certificate online</h3>
-
-
-                    <p>Google Data Analyst</p>
-                    <p>Free Courses</p>
-                    <p>Skills for Data Science Teams</p>
-                    <p>MasterTrack® Certificates</p>
-
-                    <p>Google Project Management</p>
-                    <p>Learn a Language</p>
-                    <p>Data Driven Decision Making</p>
-                    <p>Professional Certificates</p>
-
-                    <p>Google UX Design</p>
-                    <p>Python</p>
-                    <p>Software Engineering Skills</p>
-                    <p>University Certificates</p>
-
-                    <p>Google IT Support</p>
-                    <p>Java</p>
-                    <p>Soft Skills for Engineering Teams</p>
-                    <p>MBA & Business Degrees</p>
-
-                    <p>IBM Data Science</p>
-                    <p>Web Design</p>
-                    <p>Management Skills</p>
-                    <p>Data Science Degrees</p>
-
-                    <p>IBM Data Analyst</p>
-                    <p>SQL</p>
-                    <p>Marketing Skills</p>
-                    <p>Computer Science Degrees</p>
-
-                    <p>IBM Data Analytics with Excel and R</p>
-                    <p>Cursos Gratis</p>
-                    <p>Skills for Sales Teams</p>
-                    <p>Data Analytics Degrees</p>
-
-                    <p>IBM Cybersecurity Analyst</p>
-                    <p>Microsoft Excel</p>
-                    <p>Product Manager Skills</p>
-                    <p>Public Health Degrees</p>
-
-                    <p>Facebook Social Media Marketing</p>
-                    <p>Project Management</p>
-                    <p>Skills for Finance</p>
-                    <p>Social Sciences Degrees</p>
-
-                    <p>IBM Full Stack Cloud Developer</p>
-                    <p>Cybersecurity</p>
-                    <p>Android Development Projects</p>
-                    <p>Management Degrees</p>
-
-
-                    <p>Salesforce Sales Development Representative</p>
-                    <p>Human Resources</p>
-                    <p>TensorFlow and Keras Projects</p>
-                    <p>Degrees from Top European Universities</p>
-
-                    <p>Salesforce Sales Operations</p>
-                    <p>Data Science Free Courses</p>
-                    <p>Python for Everybody</p>
-                    <p>Master's Degrees</p>
-
-                    <p>Soporte de Tecnologías de la <br> Información de Google</p>
-                    <p>Speaking English</p>
-                    <p>Deep Learning</p>
-                    <p>Bachelor's Degrees</p>
-
-                    <p>Certificado profesional de <br> Suporte em TI do Google</p>
-                    <p>Content Writing</p>
-                    <p>Excel Skills for Business</p>
-                    <p>Degrees with a Performance Pathway</p>
-
-                    <p>Google IT Automation with Python</p>
-                    <p>Full Stack Web Development</p>
-                    <p>Business Foundations</p>
-                    <p>Bsc Courses</p>
-
-                    <p>DeepLearning.AI Tensorflow</p>
-                    <p>Artificial Intelligence</p>
-                    <p>Machine Learning</p>
-                    <p>What is a Bachelor's Degree?</p>
-
-                    <p>Popular Cybersecurity Certifications</p>
-                    <p>C Programming</p>
-                    <p>AWS Fundamentals</p>
-                    <p>How Long Does a Master's Degree Take?</p>
-
-                    <p>Popular SQL Certifications</p>
-                    <p>Communication Skills</p>
-                    <p>Data Engineering Foundations</p>
-                    <p>Is an Online MBA Worth It</p>
-
-                    <p>Popular IT Certifications</p>
-                    <p>Blockchain</p>
-                    <p>Data Analyst Skills</p>
-                    <p>7 Ways to Pay for Graduate School</p>
-
-                    <p>See all certificates</p>
-                    <p>See all courses</p>
-                    <p>Skills for UX Designers</p>
-                    <p>See all degrees</p>
-                    
-                    <div class="f_clear"></div>
-                </div>
-
-
-                <div class="footer_bottom_left">
-                    <h1>Coursera</h1>
-                    <h1>Community</h1>
-                    <h1>More</h1>
-
-
-                    <p>About</p>
-                    <p>Learners</p>
-                    <p>Press</p>
-
-                    <p>What We Offer</p>
-                    <p>Partners</p>
-                    <p>Investors</p>
-
-                    <p>Leadership</p>
-                    <p>Developers</p>
-                    <p>Terms</p>
-
-                    <p>Careers</p>
-                    <p>Beta Testers</p>
-                    <p>Privacy</p>
-
-                    <p>Catalog</p>
-                    <p>Translators</p>
-                    <p>Help</p>
-
-                    <p>Coursera Plus</p>
-                    <p>Blog</p>
-                    <p>Accessibility</p>
-
-                    <p>Professional Certificates</p>
-                    <p>Tech Blog</p>
-                    <p>Contact</p>
-
-                    <p>MasterTrack® Certificates</p>
-                    <p>Teaching Center</p>
-                    <p>Articles</p>
-
-                    <p>Degrees</p>
-                    <p></p>
-                    <p>Directory</p>
-
-                    <p>For Enterprise</p>
-                    <p></p>
-                    <p>Affiliates</p>
-                    
-
-                </div>
-                <div class="f_clear"></div>
-
-
-                <div class="footer_bottom_right">
-                    <img src="img/app Store.svg" alt="App store"><br>
-                    <img src="img/google Store.png" id="google_store" alt="Google store"><br>
-                    <img src="img/certified corporation logo.png" alt="Certified Corporation">
-
-                </div>
-                <div class="f_clear"></div>
-                <hr>
-
-                <div class="footer_main">
-                    <div class="footer_main_left"><p>© 2021 Coursera Inc. All rights reserved.</p></div>
-                <div class="f_clear"></div>
-
-                    <div class="footer_main_right">
-                        <img src="img/Facebook-f_Logo-Black-Logo.wine.png" alt="FaceBook">
-                        <img src="img/LinkedIn-Icon-Black-Logo.wine.png" alt="Linkdin">
-                        <img src="img/Twitter-Logo.wine.png" alt="Twitter">
-                        <img src="img/YouTube-Icon-Almost-Black-Logo.wine.png" alt="You tube">
-                        <img src="img/Instagram-Glyph-Black-Logo.wine.png" alt="Instagram">
-                    </div>
-                <div class="f_clear"></div>
-
-
-                </div>
-
-            </div> -->
+        <%- include("partials/footer")%>
 
     </div>
 

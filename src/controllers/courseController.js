@@ -54,4 +54,7 @@ router.get("/:id/checkout", async(req, res)=>{
         course:course
     })
 })
+
+
+
 module.exports = router;
