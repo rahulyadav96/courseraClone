@@ -10,12 +10,6 @@ app.use(express.json())
 app.set("view engine", "ejs")
 app.use(express.static("public"));
 
-
-//Working for express and views:-
-
-
-
-
 //setting up default view path
 app.set("views", path.join(__dirname, "views"))
 
@@ -39,7 +33,9 @@ const exploreController = require("./controllers/exploreController")
 
 
 
-
+app.get("/makePayment", (req,res)=>{
+   res.render("./courses/makePayment");
+})
 
 
 app.use("/properties", propCont);

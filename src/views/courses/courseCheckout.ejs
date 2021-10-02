@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Course Checkout</title>
+    <link rel="stylesheet" href="../../css/courseCheckout.css">
+    <script src="../../js/checkOut.js"></script>
+</head>
+<body>
+    <div class="Checkout-cont">
+        <div class="perc">
+            <h1><%= course.title %> </h1>
+            <div class="pr-option">
+                <form onsubmit="perchase(event)">
+                    <div>
+                        <input type="radio" id="with-certicate" name="prc" value="with certificate" checked>
+                        <label for="with-certicate">Purchase Course. &#8377; 4,337</label>
+                        <p>Commit to earning a Certificate—it's a trusted, shareable way to showcase your new skills.
+                        </p>
+                    </div>
+                    
+                    <div>
+                        <input type="radio" id="without-certicate" name="prc" value="without certificate">
+                        <label for="without-certicate">Full Course, No Certificate.</label>
+                        <p>You will still have access to all course materials for this course.</p>
+                    </div>
+                    <div class="cnt">
+                        <input type="submit" id="sbt" value="Continue ->">
+                    </div>
+                    
+                </form>
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>
