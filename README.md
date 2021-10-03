@@ -1,17 +1,17 @@
-# Project Title: 
+# Project Title: Coursera
  
 Cloning  a website https://www.coursera.org/in. 
 
-# Technology used :
-    We completed this project with the help Various technology 
+# Technologies used :
+    We completed this project with the help Various technologies 
     For Frontend we have used HTML, CSS, Javascript .
     For Backend  We have used mongoose,mongoDbAtlas, NodeJs(express Framework)and localstorage for registration and login functions.
 
-# Repository name:
-courseraClone
+# Repository name:courseraClone
+<!-- courseraClone -->
 
 # Libraries used:
-For google font: https://fonts.google.com/specimen/Source+Sans+Pro
+For google font: https://fonts.google.com/specimen/Source+Sans+Pro,
 For Backend : ejs,body-parser,path,mongoose
 
 
