@@ -1,6 +1,6 @@
 # Project Title: Coursera
  
-# Cloning  a website https://www.coursera.org/in. 
+Cloning  a website https://www.coursera.org/in. 
 
 # Technologies used :
 ## We completed this project with the help of Various technologies
@@ -30,10 +30,26 @@
     
 
 
+ 
+### Sharoof Khan
+*  ##### Landing Page
+
+
 # Team Members:
 
-<strong>Sharoof Khan</strong> --> Landing Page
-<br><br>
-<strong>Rahul Yadav</strong> -->  For Students Page and For Enterprise Page, Free coures page, About Course page, Checkout page and Payment page .with all backends
-<br><br>
-<strong>Sagar Dhyani</strong> --> University page , University registration page (with all JS), University login page (with all JS), Coursera signup page, Coursera login page. with all backends
+### Rahul Yadav
+* ##### For Students Page and For Enterprise Page
+* ##### Free coures page
+* ##### About Course page
+* ##### Checkout page and Payment page
+* ##### with all backends
+
+
+### Sagar Dhyani
+* ##### University page
+* ##### University registration page
+* ##### University login page
+* ##### Coursera signup page
+* ##### Coursera login page
+* ##### with all backends
+ 
