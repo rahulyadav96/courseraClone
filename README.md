@@ -17,7 +17,7 @@ Cloning  a website https://www.coursera.org/in.
             * ejs
     * LocalStorage
     
-# Repository name:courseraClone
+# Repository name: courseraClone
 <!-- courseraClone -->
 
 # Libraries used:
