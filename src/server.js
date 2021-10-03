@@ -87,6 +87,18 @@ app.get("/students",(req,res)=>{
     res.render("students");
 })
 
+app.get("/signup", (req, res)=>{
+
+    res.render("signup")
+})
+
+app.get("/login", (req, res)=>{
+
+    res.render("login")
+})
+
+
+
 //server running on
 app.listen(port, async()=>{
     await connect(); //connecting with database
