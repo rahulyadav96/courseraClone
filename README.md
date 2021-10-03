@@ -31,11 +31,13 @@ Cloning  a website https://www.coursera.org/in.
 
 
  
-### Sharoof Khan
-*  ##### Landing Page
+
 
 
 # Team Members:
+
+### Sharoof Khan
+*  ##### Landing Page
 
 ### Rahul Yadav
 * ##### For Students Page and For Enterprise Page
