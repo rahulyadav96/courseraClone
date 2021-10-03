@@ -1,21 +1,21 @@
 # Project Title: Coursera
  
-Cloning  a website https://www.coursera.org/in. 
+# Cloning  a website https://www.coursera.org/in. 
 
 # Technologies used :
-    We completed this project with the help Various technologies
-    * Frontend
-        * HTML
-        * CSS
-        * JAVASCRIPT.
-    * BACKEND
-        * MongoDb
-            * Mongoose
-            * MongoDbAtlas
-        * NodeJs
-            * Express
-                * ejs
-        * LocalStorage
+## We completed this project with the help of Various technologies
+* Frontend
+    * HTML
+    * CSS
+    * JAVASCRIPT.
+* BACKEND
+    * MongoDb
+        * Mongoose
+        * MongoDbAtlas
+    * NodeJs
+        * Express
+            * ejs
+    * LocalStorage
     
 # Repository name:courseraClone
 <!-- courseraClone -->
