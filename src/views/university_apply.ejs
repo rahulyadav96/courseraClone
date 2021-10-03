@@ -34,7 +34,7 @@
 
                 <p>Start your application or request more info.</p>
 
-                <button  class="get_button"><a href="/register/<%=prog._id%>">Apply</a></button>
+                <button  class="get_button"><a href="/register/<%=prog._id%>" id="apply">Apply</a></button>
 
                 <button class="request_button">Request Info</button>
             </div>
@@ -136,9 +136,9 @@
 
 <!-- <script>
 
-    function goTo() {
+    function nextPage() {
 
-        location.href = "apply_now.html";
+        location.href = "register.ejs";
     }
 
     var applyBtn = document.getElementsByClassName("get_button")

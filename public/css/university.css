@@ -126,6 +126,7 @@
     margin-left: 5%;
     margin-bottom: 10px;
     height: 50px;
+    cursor:pointer;
     background-color: rgb(15, 96, 191);
     color: white;
     font-size: 16px;
@@ -155,14 +156,18 @@
     border: 1px solid rgb(15, 96, 191);
     font-size: 16px;
     text-align: center;
+    cursor:pointer;
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
     line-height: 24px;
 }
 
 .request_button:hover {
+
     background-color: rgb(15, 96, 191);
+    cursor:pointer;
     color: white;
+
 }
 
 /* text and buttons styling inside get started div  ends*/
@@ -306,3 +311,9 @@
     font-size: 16px;
 }
 
+#apply{
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+    color:white;
+    font-size: 16px;
+}
