@@ -10,6 +10,7 @@ body{
 .header{
     background: linear-gradient(90deg,rgba(214, 57, 57,1),rgba(223, 223, 130,1));
     color: white;
+    margin-top: 76px;
 }
 
 .header-wrap{
@@ -138,8 +139,9 @@ ul>li>span>a:hover{
     margin: 0;
     padding: 0;
     border-bottom: 1px solid rgb(168, 164, 164);
+    border-top: 1px solid rgb(168, 164, 164);
     position: sticky;
-    top: 0;
+    top: 76px;
 }
 .tabs-con{
     width: 80%;
